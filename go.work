@@ -1,0 +1,9 @@
+// Go workspace file that ties all project modules together for local development.
+go 1.20
+
+// Include the device agent module.
+use ./agent
+// Include the operator controller module.
+use ./controller
+// Include the central relay server module.
+use ./relay

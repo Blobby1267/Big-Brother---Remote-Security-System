@@ -1,0 +1,22 @@
+## Relay Environment Variables
+
+- RELAY_HTTP_PORT: HTTP API bind port (default 8080).
+- RELAY_TLS_PORT: TLS agent listener bind port (default 8443).
+- RELAY_SETUP_TOKENS: Comma-separated device=token pairs.
+- RELAY_SETUP_TOKEN_FILE: JSON token file alternative.
+- RELAY_DEVICE_STORE_FILE: Device key persistence file path.
+- RELAY_SERVER_CERT / RELAY_SERVER_KEY: Server cert/key for TLS listener.
+- RELAY_CLIENT_CA: Optional CA file for verifying client certs when mTLS is enabled.
+- RELAY_REQUIRE_MTLS: Set `1` to require and verify agent client certificates.
+- RELAY_CONTROLLER_TOKEN: Required bearer token for `/api/devices`, `/api/exec`, `/api/lock`, `/api/locate`.
+
+## Agent Environment Variables
+
+- BIGBROTHER_CA: Custom CA PEM path for relay verification.
+- BIGBROTHER_INSECURE: 1 to skip relay TLS verify (testing only).
+- BIGBROTHER_CLIENT_CERT / BIGBROTHER_CLIENT_KEY: Optional mTLS client cert/key.
+- BIGBROTHER_DISABLE_KEYRING: 1 to disable secure keyring usage.
+- BIGBROTHER_ALLOW_KEYFILE_FALLBACK: 1 to allow local key file fallback.
+- BIGBROTHER_COMMAND_TIMEOUT: Command timeout in seconds (default 30).
+- BIGBROTHER_ALLOW_INSECURE_PROVISIONING: 1 to permit plaintext/insecure provisioning for development only (or set `allow_insecure_relay: true` in config).
+- BIGBROTHER_ENABLE_INSECURE_TLS: 1 to allow runtime `BIGBROTHER_INSECURE` bypass in development only.

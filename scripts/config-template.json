@@ -1,0 +1,7 @@
+{
+  "device_id": "DEVICE_ID_PLACEHOLDER",
+  "setup_token": "REPLACE_WITH_ONE_TIME_TOKEN",
+  "relay_api_address": "http://RELAY_HOST_OR_IP:8080",
+  "relay_address": "https://RELAY_HOST_OR_IP:8443",
+  "allow_insecure_relay": true
+}
